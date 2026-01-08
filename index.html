@@ -225,91 +225,158 @@
 
     
 
-<!-- Card: Details/Summary -->
-<details class="group rounded-2xl border border-slate-700 bg-slate-800/40 open:bg-slate-800/60 transition-all duration-300">
-  <!-- PART 1 (clickable header) -->
-  <summary
-    class="cursor-pointer list-none p-8 rounded-2xl border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+
+<!-- Disclosure Card -->
+<div
+  data-disclosure
+  class="group rounded-2xl border border-slate-700 bg-slate-800/40 transition-all duration-300"
+>
+  <!-- Toggle button covers the preview area -->
+  <button
+    type="button"
+    class="w-full text-left p-8 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+    aria-expanded="false"
+    aria-controls="deployment-panel"
+    id="deployment-trigger"
   >
-    <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">Cybersecurity</div>
-    <h3 class="text-xl font-bold mb-3">Infrastructure Deployment</h3>
-    <p class="text-slate-400 text-sm mb-6">
-      Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a business
-      establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure, scalable, and cloud-first enterprise.
-    </p>
-    <ul class="flex flex-wrap gap-2">
-      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Microsoft 365</li>
-      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Intune</li>
-      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Backup</li>
-      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">VoIP</li>
-      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Firewall</li>
-    </ul>
-
-    <!-- Optional chevron indicator -->
-    <div class="mt-4 text-slate-400 text-xs flex items-center gap-2">
-      <span class="inline-block transition-transform duration-300 group-open:rotate-180">▼</span>
-      <span>Expand details</span>
-    </div>
-  </summary>
-
-  <!-- PART 2 (expanded content) -->
-  <div class="p-8 pt-4 border-t border-slate-700">
-    <div class="md:col-span-2 group border border-blue-500/30 rounded-2xl transition-all duration-300">
-
-      <div class="flex flex-col md:flex-row justify-between items-start mb-6">
-        <div>
-          <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
-            Full-Scale Architecture
-          </div>
-          <h3 class="text-2xl font-bold mb-3">Infrastructure Deployment</h3>
-        </div>
-        <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">
-          Independent Contractor
-        </span>
+    <!-- PREVIEW (Part 1) -->
+    <div data-preview>
+      <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">
+        Full-Scale Architecture
       </div>
-
-      <p class="text-slate-300 text-lg mb-6 leading-relaxed">
-        Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a
-        business establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure,
-        scalable, and cloud-first enterprise.
+      <h3 class="text-xl font-bold mb-3">Infrastructure Deployment</h3>
+      <p class="text-slate-400 text-sm mb-6">
+        Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a business
+        establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure, scalable, and cloud-first enterprise.
       </p>
+      <ul class="flex flex-wrap gap-2">
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Microsoft 365</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Intune</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Backup</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">VoIP</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Firewall</li>
+      </ul>
+    </div>
+  </button>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        <div>
-          <h4 class="text-white font-semibold mb-2 flex items-center">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Productivity
-          </h4>
-          <p class="text-slate-400 text-xs">Microsoft 365, Exchange Online, SharePoint &amp; Teams.</p>
+  <!-- EXPANDED PANEL (Part 2) -->
+  <div
+    id="deployment-panel"
+    role="region"
+    aria-labelledby="deployment-trigger"
+    class="overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0"
+  >
+    <div class="p-8 pt-0">
+      <div class="md:col-span-2 group p-8 bg-slate-800/60 border border-blue-500/30 rounded-2xl transition-all duration-300">
+        <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+          <div>
+            <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
+              Full-Scale Architecture
+            </div>
+            <h3 class="text-2xl font-bold mb-3">Greenfield Infrastructure Deployment</h3>
+          </div>
+          <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">
+            Independent Contractor
+          </span>
         </div>
-        <div>
-          <h4 class="text-white font-semibold mb-2 flex items-center">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Management
-          </h4>
-          <p class="text-slate-400 text-xs">Intune MDM for device lifecycle and automated provisioning.</p>
-        </div>
-        <div>
-          <h4 class="text-white font-semibold mb-2 flex items-center">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Security
-          </h4>
-          <p class="text-slate-400 text-xs">Defender for Endpoint, WatchGuard Firewall &amp; SaaS Backups.</p>
-        </div>
-        <div>
-          <h4 class="text-white font-semibold mb-2 flex items-center">
-            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Comms
-          </h4>
-          <p class="text-slate-400 text-xs">Enterprise VoIP integration and collaborative hubs.</p>
-        </div>
-      </div>
 
-      <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
-        <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">M365 Stack</span>
-        <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Azure AD</span>
-        <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">WatchGuard</span>
-        <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Cloud Governance</span>
+        <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+          Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a
+          business establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure,
+          scalable, and cloud-first enterprise.
+        </p>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div>
+            <h4 class="text-white font-semibold mb-2 flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Productivity
+            </h4>
+            <p class="text-slate-400 text-xs">Microsoft 365, Exchange Online, SharePoint &amp; Teams.</p>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-2 flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Management
+            </h4>
+            <p class="text-slate-400 text-xs">Intune MDM for device lifecycle and automated provisioning.</p>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-2 flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Security
+            </h4>
+            <p class="text-slate-400 text-xs">Defender for Endpoint, WatchGuard Firewall &amp; SaaS Backups.</p>
+          </div>
+          <div>
+            <h4 class="text-white font-semibold mb-2 flex items-center">
+              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Comms
+            </h4>
+            <p class="text-slate-400 text-xs">Enterprise VoIP integration and collaborative hubs.</p>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
+          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">M365 Stack</span>
+          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Azure AD</span>
+          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">WatchGuard</span>
+          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Cloud Governance</span>
+        </div>
       </div>
     </div>
   </div>
-</details>
+</div>
+
+<script>
+  // Smooth toggle + style morph
+  (function () {
+    const wrapper = document.querySelector('[data-disclosure]');
+    const trigger = document.getElementById('deployment-trigger');
+    const panel = document.getElementById('deployment-panel');
+
+    function openPanel() {
+      // Morph wrapper to expanded card look
+      wrapper.classList.remove('bg-slate-800/40', 'border-slate-700');
+      wrapper.classList.add('bg-slate-800/60', 'border-blue-500/30');
+
+      // Animate height
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+      trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closePanel() {
+      // Revert wrapper to preview card look
+      wrapper.classList.remove('bg-slate-800/60', 'border-blue-500/30');
+      wrapper.classList.add('bg-slate-800/40', 'border-slate-700');
+
+      panel.style.maxHeight = '0px';
+      trigger.setAttribute('aria-expanded', 'false');
+    }
+
+    trigger.addEventListener('click', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        closePanel();
+      } else {
+        openPanel();
+      }
+    });
+
+    // Optional: after expand, set to auto to handle responsive content
+    panel.addEventListener('transitionend', (e) => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        panel.style.maxHeight = 'none';
+      }
+    });
+
+    // If content changes dynamically, recalc height when opening
+    window.addEventListener('resize', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      if (expanded && panel.style.maxHeight !== 'none') {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  })();
+</script>
+
 
 
 
@@ -324,6 +391,7 @@
 
 </body>
 </html>
+
 
 
 
