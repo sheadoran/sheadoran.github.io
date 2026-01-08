@@ -226,28 +226,268 @@
     
 
 
-<!-- Disclosure Card -->
-<div
-  data-disclosure
-  class="group rounded-2xl border border-slate-700 bg-slate-800/40 transition-all duration-300"
->
-  <!-- Toggle button covers the preview area -->
-  <button
-    type="button"
-    class="w-full text-left p-8 rounded-2xl focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
-    aria-expanded="false"
-    aria-controls="deployment-panel"
-    id="deployment-trigger"
-  >
-    <!-- PREVIEW (Part 1) -->
-    <div data-preview>
-      <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">
-        Full-Scale Architecture
+
+<section class="max-w-5xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-bold mb-12 flex items-center">
+    Key Projects <span class="ml-4 h-[1px] bg-slate-700 flex-grow"></span>
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-8" data-accordion="projects">
+
+    <!-- CARD 1: Cloud Transformation -->
+    <button
+      type="button"
+      class="group p-8 bg-slate-800/40 border border-slate-700 rounded-2xl hover:border-blue-500 transition-all duration-300 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+      aria-expanded="false"
+      aria-controls="project1-panel"
+      data-target="#project1-panel"
+    >
+      <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">Cloud Transformation</div>
+      <h3 class="text-xl font-bold mb-3">Enterprise Microsoft 365 Migration</h3>
+      <p class="text-slate-400 text-sm mb-6">
+        Led a full-scale migration of legacy on-premise servers &amp; services to a Microsoft 365 SaaS enviroment for a UK School Adacdemy with 4 Schools, ensuring zero downtime over a 3-month transition period.
+      </p>
+      <ul class="flex flex-wrap gap-2">
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Microsoft 365</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Intune</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">SharePoint</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Teams</li>
+      </ul>
+    </button>
+
+    <!-- PANEL 1 (full-width; appears below Card 1) -->
+    <div
+      id="project1-panel"
+      role="region"
+      aria-label="Enterprise Microsoft 365 Migration details"
+      class="md:col-span-2 overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0 hidden"
+      data-panel
+    >
+      <div class="p-0">
+        <div class="group p-8 bg-slate-800/60 border border-blue-500/30 rounded-2xl transition-all duration-300">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+            <div>
+              <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
+                Cloud Transformation
+              </div>
+              <h3 class="text-2xl font-bold mb-3">Enterprise Microsoft 365 Migration</h3>
+            </div>
+            <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">Programme Lead</span>
+          </div>
+
+          <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+            Led a full-scale migration of legacy on-premise servers &amp; services to Microsoft 365 for a multi-school academy,
+            coordinating stakeholders, cutovers, and training while ensuring zero downtime across the estate.
+          </p>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Productivity
+              </h4>
+              <p class="text-slate-400 text-xs">Exchange Online, SharePoint, Teams, OneDrive.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Management
+              </h4>
+              <p class="text-slate-400 text-xs">Intune MDM, Autopilot, conditional access.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Security
+              </h4>
+              <p class="text-slate-400 text-xs">Defender suite, MFA, DLP &amp; compliance.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Adoption
+              </h4>
+              <p class="text-slate-400 text-xs">Training tracks, champions, governance.</p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">M365</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Intune</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Governance</span>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <button
+      type="button"
+      class="group p-8 bg-slate-800/40 border border-slate-700 rounded-2xl hover:border-blue-500 transition-all duration-300 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+      aria-expanded="false"
+      aria-controls="project2-panel"
+      data-target="#project2-panel"
+    >
+      <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">Cybersecurity</div>
+      <h3 class="text-xl font-bold mb-3">New Business Start-up</h3>
+      <p class="text-slate-400 text-sm mb-6">
+        Designed and implemented a multi-layered security framework for a healthcare provider, achieving 100% compliance with ISO 27001 standards.
+      </p>
+      <ul class="flex flex-wrap gap-2">
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Security Audit</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">ISO 27001</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Firewall Management</li>
+      </ul>
+    </button>
+
+    <!-- PANEL 2 -->
+    <div
+      id="project2-panel"
+      role="region"
+      aria-label="New Business Start-up details"
+      class="md:col-span-2 overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0 hidden"
+      data-panel
+    >
+      <div class="p-0">
+        <div class="group p-8 bg-slate-800/60 border border-blue-500/30 rounded-2xl transition-all duration-300">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+            <div>
+              <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
+                Cybersecurity
+              </div>
+              <h3 class="text-2xl font-bold mb-3">New Business Start-up</h3>
+            </div>
+            <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">Independent Contractor</span>
+          </div>
+
+          <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+            Established a greenfield security posture: identity, endpoints, perimeter, and SaaS backups; codified policies for ISO 27001 alignment and evidence.
+          </p>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Identity
+              </h4>
+              <p class="text-slate-400 text-xs">Azure AD, MFA, conditional access.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Endpoint
+              </h4>
+              <p class="text-slate-400 text-xs">Intune hardening, Defender AV/EDR.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Perimeter
+              </h4>
+              <p class="text-slate-400 text-xs">Firewall baselines, logging, alerting.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Governance
+              </h4>
+              <p class="text-slate-400 text-xs">Policies, risk register, audits.</p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">ISO 27001</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">WatchGuard</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Cloud Backups</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <button
+      type="button"
+      class="group p-8 bg-slate-800/40 border border-slate-700 rounded-2xl hover:border-blue-500 transition-all duration-300 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+      aria-expanded="false"
+      aria-controls="project3-panel"
+      data-target="#project3-panel"
+    >
+      <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">Cybersecurity</div>
+      <h3 class="text-xl font-bold mb-3">Infrastructure Hardening</h3>
+      <p class="text-slate-400 text-sm mb-6">
+        Designed and implemented a multi-layered security framework for a healthcare provider, achieving 100% compliance with ISO 27001 standards.
+      </p>
+      <ul class="flex flex-wrap gap-2">
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Security Audit</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">ISO 27001</li>
+        <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Firewall Management</li>
+      </ul>
+    </button>
+
+    <!-- PANEL 3 -->
+    <div
+      id="project3-panel"
+      role="region"
+      aria-label="Infrastructure Hardening details"
+      class="md:col-span-2 overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0 hidden"
+      data-panel
+    >
+      <div class="p-0">
+        <div class="group p-8 bg-slate-800/60 border border-blue-500/30 rounded-2xl transition-all duration-300">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+            <div>
+              <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
+                Cybersecurity
+              </div>
+              <h3 class="text-2xl font-bold mb-3">Infrastructure Hardening</h3>
+            </div>
+            <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">Security Lead</span>
+          </div>
+
+          <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+            Baseline and harden servers, endpoints and identities; implement least privilege, patch automation, logging &amp; alerting pipelines.
+          </p>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Controls
+              </h4>
+              <p class="text-slate-400 text-xs">CIS benchmarks, secure baselines.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Identity
+              </h4>
+              <p class="text-slate-400 text-xs">Admin separation, PAM patterns.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Patch/Config
+              </h4>
+              <p class="text-slate-400 text-xs">Update rings, compliance drift.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Observability
+              </h4>
+              <p class="text-slate-400 text-xs">Logs, SIEM, runbooks.</p>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">CIS</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Intune</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Defender</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <button
+      type="button"
+      class="group p-8 bg-slate-800/40 border border-slate-700 rounded-2xl hover:border-blue-500 transition-all duration-300 text-left w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+      aria-expanded="false"
+      aria-controls="project4-panel"
+      data-target="#project4-panel"
+    >
+      <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">Full-Scale Architecture</div>
       <h3 class="text-xl font-bold mb-3">Infrastructure Deployment</h3>
       <p class="text-slate-400 text-sm mb-6">
-        Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a business
-        establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure, scalable, and cloud-first enterprise.
+        Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a business establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure, scalable, and cloud-first enterprise.
       </p>
       <ul class="flex flex-wrap gap-2">
         <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Microsoft 365</li>
@@ -256,126 +496,111 @@
         <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">VoIP</li>
         <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Firewall</li>
       </ul>
-    </div>
-  </button>
+    </button>
 
-  <!-- EXPANDED PANEL (Part 2) -->
-  <div
-    id="deployment-panel"
-    role="region"
-    aria-labelledby="deployment-trigger"
-    class="overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0"
-  >
-    <div class="p-8 pt-0">
-      <div class="md:col-span-2 group p-8 bg-slate-800/60 border border-blue-500/30 rounded-2xl transition-all duration-300">
-        <div class="flex flex-col md:flex-row justify-between items-start mb-6">
-          <div>
-            <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
-              Full-Scale Architecture
+    <!-- PANEL 4 -->
+    <div
+      id="project4-panel"
+      role="region"
+      aria-label="Infrastructure Deployment details"
+      class="md:col-span-2 overflow-hidden transition-[max-height] duration-500 ease-in-out max-h-0 hidden"
+      data-panel
+    >
+      <div class="p-0">
+        <div class="group p-8 bg-slate-800/60 border border-blue-500/30 rounded-2xl transition-all duration-300">
+          <div class="flex flex-col md:flex-row justify-between items-start mb-6">
+            <div>
+              <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">Full-Scale Architecture</div>
+              <h3 class="text-2xl font-bold mb-3">Greenfield Infrastructure Deployment</h3>
             </div>
-            <h3 class="text-2xl font-bold mb-3">Greenfield Infrastructure Deployment</h3>
+            <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">Independent Contractor</span>
           </div>
-          <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">
-            Independent Contractor
-          </span>
-        </div>
 
-        <p class="text-slate-300 text-lg mb-6 leading-relaxed">
-          Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a
-          business establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure,
-          scalable, and cloud-first enterprise.
-        </p>
+          <p class="text-slate-300 text-lg mb-6 leading-relaxed">
+            Acted as the sole Technical Architect to design and deploy a complete modern workplace environment for a business establishing its first formal IT presence. Transformed a "zero-IT" environment into a secure, scalable, and cloud-first enterprise.
+          </p>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <div>
-            <h4 class="text-white font-semibold mb-2 flex items-center">
-              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Productivity
-            </h4>
-            <p class="text-slate-400 text-xs">Microsoft 365, Exchange Online, SharePoint &amp; Teams.</p>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Productivity
+              </h4>
+              <p class="text-slate-400 text-xs">Microsoft 365, Exchange Online, SharePoint &amp; Teams.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Management
+              </h4>
+              <p class="text-slate-400 text-xs">Intune MDM for device lifecycle and automated provisioning.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Security
+              </h4>
+              <p class="text-slate-400 text-xs">Defender for Endpoint, WatchGuard Firewall &amp; SaaS Backups.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-semibold mb-2 flex items-center">
+                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Comms
+              </h4>
+              <p class="text-slate-400 text-xs">Enterprise VoIP integration and collaborative hubs.</p>
+            </div>
           </div>
-          <div>
-            <h4 class="text-white font-semibold mb-2 flex items-center">
-              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Management
-            </h4>
-            <p class="text-slate-400 text-xs">Intune MDM for device lifecycle and automated provisioning.</p>
-          </div>
-          <div>
-            <h4 class="text-white font-semibold mb-2 flex items-center">
-              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Security
-            </h4>
-            <p class="text-slate-400 text-xs">Defender for Endpoint, WatchGuard Firewall &amp; SaaS Backups.</p>
-          </div>
-          <div>
-            <h4 class="text-white font-semibold mb-2 flex items-center">
-              <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span> Comms
-            </h4>
-            <p class="text-slate-400 text-xs">Enterprise VoIP integration and collaborative hubs.</p>
-          </div>
-        </div>
 
-        <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
-          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">M365 Stack</span>
-          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Azure AD</span>
-          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">WatchGuard</span>
-          <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Cloud Governance</span>
+          <div class="pt-6 border-t border-slate-700 flex flex-wrap gap-2">
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">M365 Stack</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Azure AD</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">WatchGuard</span>
+            <span class="text-[11px] font-mono bg-slate-900 text-slate-400 px-3 py-1 rounded">Cloud Governance</span>
+          </div>
         </div>
       </div>
     </div>
+
   </div>
-</div>
+</section>
 
 <script>
-  // Smooth toggle + style morph
+  // Vanilla JS: toggle full-width panels inside the grid
   (function () {
-    const wrapper = document.querySelector('[data-disclosure]');
-    const trigger = document.getElementById('deployment-trigger');
-    const panel = document.getElementById('deployment-panel');
+    const accordion = document.querySelector('[data-accordion="projects"]');
+    if (!accordion) return;
 
-    function openPanel() {
-      // Morph wrapper to expanded card look
-      wrapper.classList.remove('bg-slate-800/40', 'border-slate-700');
-      wrapper.classList.add('bg-slate-800/60', 'border-blue-500/30');
+    const triggers = accordion.querySelectorAll('[data-target]');
 
-      // Animate height
+    function closeAll() {
+      const openPanels = accordion.querySelectorAll('[data-panel]:not(.hidden)');
+      openPanels.forEach(panel => {
+        panel.style.maxHeight = '0px';
+        panel.classList.add('hidden');
+        const btn = accordion.querySelector('[aria-controls="' + panel.id + '"]');
+        if (btn) btn.setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    function openPanel(panel, btn) {
+      // Close others (accordion behavior)
+      closeAll();
+
+      // Show and animate
+      panel.classList.remove('hidden');
+      btn.setAttribute('aria-expanded', 'true');
+
+      // set a numeric maxHeight to enable transition
       panel.style.maxHeight = panel.scrollHeight + 'px';
-      trigger.setAttribute('aria-expanded', 'true');
-    }
 
-    function closePanel() {
-      // Revert wrapper to preview card look
-      wrapper.classList.remove('bg-slate-800/60', 'border-blue-500/30');
-      wrapper.classList.add('bg-slate-800/40', 'border-slate-700');
+      // Optional: after expand completes, set to 'none' to allow responsive content
+      const onEnd = () => {
+        if (btn.getAttribute('aria-expanded') === 'true') {
+          panel.style.maxHeight = 'none';
+        }
+        panel.removeEventListener('transitionend', onEnd);
+      };
+      panel.addEventListener('transitionend', onEnd);
 
-      panel.style.maxHeight = '0px';
-      trigger.setAttribute('aria-expanded', 'false');
-    }
+      // Scroll the panel into view if it's below the fold
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    trigger.addEventListener('click', () => {
-      const expanded = trigger.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        closePanel();
-      } else {
-        openPanel();
-      }
-    });
-
-    // Optional: after expand, set to auto to handle responsive content
-    panel.addEventListener('transitionend', (e) => {
-      const expanded = trigger.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        panel.style.maxHeight = 'none';
-      }
-    });
-
-    // If content changes dynamically, recalc height when opening
-    window.addEventListener('resize', () => {
-      const expanded = trigger.getAttribute('aria-expanded') === 'true';
-      if (expanded && panel.style.maxHeight !== 'none') {
-        panel.style.maxHeight = panel.scrollHeight + 'px';
-      }
-    });
-  })();
-</script>
 
 
 
@@ -391,6 +616,7 @@
 
 </body>
 </html>
+
 
 
 
