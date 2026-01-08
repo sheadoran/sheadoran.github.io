@@ -223,6 +223,72 @@
     </div>
 </div>
 
+    
+<!-- Wrapper Card -->
+<div class="rounded-2xl border border-slate-700 bg-slate-800/40 transition-all duration-300">
+  <!-- PART 1 header acts as the toggle -->
+  <button
+    type="button"
+    class="w-full text-left p-8 rounded-2xl hover:border-blue-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
+    aria-expanded="false"
+    aria-controls="deployment-panel"
+    id="deployment-trigger"
+  >
+    <div class="text-blue-500 mb-4 font-mono text-sm uppercase tracking-widest">Cybersecurity</div>
+    <h3 class="text-xl font-bold mb-3">Infrastructure Deployment</h3>
+    <p class="text-slate-400 text-sm mb-6">
+      Acted as the sole Technical Architect to design and deploy a complete modern workplace environment…
+    </p>
+    <ul class="flex flex-wrap gap-2">
+      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Microsoft 365</li>
+      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Intune</li>
+      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Backup</li>
+      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">VoIP</li>
+      <li class="text-[10px] bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Firewall</li>
+    </ul>
+    <div class="mt-4 text-slate-400 text-xs flex items-center gap-2">
+      <span class="inline-block transition-transform duration-300" data-rotate>▼</span>
+      <span>Expand details</span>
+    </div>
+  </button>
+
+  <!-- PART 2 expanded content -->
+  <div id="deployment-panel" class="px-8 pb-8 pt-0 hidden" role="region" aria-labelledby="deployment-trigger">
+    <div class="mt-4 md:col-span-2 border border-blue-500/30 rounded-2xl p-0">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-6 pt-6">
+        <div>
+          <div class="text-blue-500 mb-2 font-mono text-sm uppercase tracking-widest font-bold text-glow">
+            Full-Scale Architecture
+          </div>
+          <h3 class="text-2xl font-bold mb-3">Infrastructure Deployment</h3>
+        </div>
+        <span class="bg-blue-600/20 text-blue-400 text-xs px-3 py-1 rounded-full border border-blue-500/20">
+          Independent Contractor
+        </span>
+      </div>
+
+      <!-- your grid + tags same as before -->
+      <!-- ... (same content as Part 2) ... -->
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const btn = document.getElementById('deployment-trigger');
+    const panel = document.getElementById('deployment-panel');
+    const chevron = btn.querySelector('[data-rotate]');
+
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      panel.classList.toggle('hidden', expanded);
+      if (chevron) chevron.style.transform = expanded ? 'rotate(0deg)' : 'rotate(180deg)';
+    });
+  })();
+</script>
+
+
     <footer class="max-w-5xl mx-auto px-6 py-20 text-center border-t border-slate-800">
         <p class="text-slate-500 mb-4">Interested in working together?</p>
         <div class="flex justify-center gap-6">
@@ -234,6 +300,7 @@
 
 </body>
 </html>
+
 
 
 
